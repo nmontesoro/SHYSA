@@ -1,0 +1,40 @@
+\documentclass{book}
+
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks = true
+}
+\urlstyle{same}
+
+\usepackage[
+    backend=biber,
+    style=alphabetic,
+    sorting=ynt
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage[toc, acronym, automake]{glossaries}
+\loadglsentries{glossary.tex}
+\makeglossaries
+
+\title{Resumen -- Seguridad, Higiene y Saneamiento Ambiental}
+\author{Nazareno Montesoro}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\input{1.tex}
+
+\nocite{*}
+\printbibliography
+\printglossary
+\printglossary[type=\acronymtype]
+
+\end{document}
